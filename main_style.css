@@ -84,7 +84,7 @@
     height: 260px;
 }
 .modal1_body_left_footer > a {
-    /* text-decoration: none; */
+    text-decoration: none;
 }
 .github_icon {
     width: 53px;
