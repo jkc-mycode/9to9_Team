@@ -76,9 +76,10 @@
     padding: 10px;
 }
 .modal1_body_left {
+    position: fixed;
     border: 2px solid black;
     float: left;
-    width: 35%;
+    width: 23%;
     padding: 20px 10px 10px 10px;
     border-radius: 8px;
     
@@ -138,7 +139,6 @@
 .comment {
     width: auto;
     height: 100px;
-    /* border: 1.5px solid black; */
 }
 .comment_left {
     float: left;
