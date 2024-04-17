@@ -72,19 +72,24 @@ $('.about').click(async function() {
 $("#comment_upload_btn").click(async function () {
     let commenter = $('#floatingInputName').val();
     let content = $('#floatingTextarea2Content').val();
-    let date = new Date();
-    let isDelete = false;
 
-    let doc = {
-        'member': member,  // 현재 모달창의 주인
-        'commenter': commenter,  // 댓글 작성자
-        'content': content,  // 댓글 내용
-        'date': date,  // 댓글 작성 날짜(시간)
-        'isDelete': isDelete,  // 삭제된 댓글 유무
-    };
-    await addDoc(collection(db, "9to9_Team_Intro"), doc);
-    alert('등록완료!');
-    window.location.reload();
+    // 댓글 입력 유효성 검사
+    if (commenter != '' && content != '') {
+        let date = new Date();
+        let isDelete = false;
+        let doc = {
+            'member': member,  // 현재 모달창의 주인
+            'commenter': commenter,  // 댓글 작성자
+            'content': content,  // 댓글 내용
+            'date': date,  // 댓글 작성 날짜(시간)
+            'isDelete': isDelete,  // 삭제된 댓글 유무
+        };
+        await addDoc(collection(db, "9to9_Team_Intro"), doc);
+        alert('등록완료!');
+        window.location.reload();
+    } else {
+        alert("이름 또는 내용이 비었습니다.");
+    }
 });
 
 
