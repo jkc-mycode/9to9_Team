@@ -10,17 +10,22 @@ import { firebaseConfig } from "./secret.js"
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
+// 현재 모달창이 누구꺼인지 저장하기 위한 변수
 let member = "";
 
+// 더 보기 버튼 클릭 시 동작 (댓글 출력을 위해 사용)
 $('.about').click(async function() {
     member = $(this).next("input").val();
     console.log(member);
 
+    // 댓글 리스트를 출력하기 전에 비워두기 위한 함수
     $('#comment_list').empty();
+
     let docs = await getDocs(query(collection(db, "9to9_Team_Intro"), orderBy("date")));
     docs.forEach((doc) => {
         let row = doc.data();
 
+        // 현재 모달의 주인과 row의 데이터가 같고 isDelete가 false일 때 댓글 출력
         if (row['member'] == member && row['isDelete'] == false) {
             let commenter = row['commenter'];
             let content = row['content'];
@@ -51,6 +56,7 @@ $('.about').click(async function() {
                         </div>
                     </div>
                     <div class="comment_right">
+                        <!-- 댓글들을 구분하기 위해서 파이이베이스 각 필드의 id 값을 value에 넣어줌 -->
                         <button value=${doc.id} type="button" class="btn btn-outline-danger comment_delete_btn">삭제</button>
                     </div>
                 </div>
@@ -62,22 +68,28 @@ $('.about').click(async function() {
 })
 
 
+// 댓글 등록하는 버튼 클릭 시 동작
 $("#comment_upload_btn").click(async function () {
     let commenter = $('#floatingInputName').val();
     let content = $('#floatingTextarea2Content').val();
-    let date = new Date();
-    let isDelete = false;
 
-    let doc = {
-        'member': member,
-        'commenter': commenter,
-        'content': content,
-        'date': date,
-        'isDelete': isDelete,
-    };
-    await addDoc(collection(db, "9to9_Team_Intro"), doc);
-    alert('등록완료!');
-    window.location.reload();
+    // 댓글 입력 유효성 검사
+    if (commenter != '' && content != '') {
+        let date = new Date();
+        let isDelete = false;
+        let doc = {
+            'member': member,  // 현재 모달창의 주인
+            'commenter': commenter,  // 댓글 작성자
+            'content': content,  // 댓글 내용
+            'date': date,  // 댓글 작성 날짜(시간)
+            'isDelete': isDelete,  // 삭제된 댓글 유무
+        };
+        await addDoc(collection(db, "9to9_Team_Intro"), doc);
+        alert('등록완료!');
+        window.location.reload();
+    } else {
+        alert("이름 또는 내용이 비었습니다.");
+    }
 });
 
 

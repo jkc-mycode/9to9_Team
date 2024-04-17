@@ -47,7 +47,6 @@
     border-radius: 4px;
     background: #fff;
     transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
-    cursor: pointer;
 }
 .card:hover {
     transform: scale(1.05);
@@ -79,7 +78,7 @@
     position: fixed;
     border: 2px solid black;
     float: left;
-    width: 23%;
+    width: 400px;
     padding: 20px 10px 10px 10px;
     border-radius: 8px;
     
