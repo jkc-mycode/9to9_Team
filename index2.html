@@ -349,6 +349,29 @@
                         </div>
                     </div>
                     <!--게시판 작성란-->
+                    <!-- 댓글 기능 구현 -->
+                    <hr class="border border-success border-3" style="margin-bottom: 20px;">
+                    <div class="comment_box">
+                        <div class="comment_input_box">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control comment_name" id="floatingInputName"
+                                    placeholder="홍길동">
+                                <label for="floatingInputName">이름</label>
+                            </div>
+                            <div class="form-floating">
+                                <textarea class="form-control comment_textarea" placeholder="Leave a comment here"
+                                    id="floatingTextarea2Content" style="height: 100px; font-size: 20px;"></textarea>
+                                <label for="floatingTextarea2Content">응원 한 마디 남겨주세요!!</label>
+                            </div>
+                            <button type="button" id="comment_upload_btn"
+                                class="btn btn-primary comment_btn">등록하기</button>
+                            <input type="hidden" value="김정찬">
+                        </div>
+                        <hr class="border border-dark border-2">
+                        <div class="comment_list" id="comment_list">
+                            <!-- 댓글 리스트가 들어갈 자리 -->
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
