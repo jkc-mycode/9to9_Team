@@ -56,6 +56,7 @@ $('.about').click(async function() {
                         </div>
                     </div>
                     <div class="comment_right">
+                        <!-- 댓글들을 구분하기 위해서 파이이베이스 각 필드의 id 값을 value에 넣어줌 -->
                         <button value=${doc.id} type="button" class="btn btn-outline-danger comment_delete_btn">삭제</button>
                     </div>
                 </div>
@@ -75,11 +76,11 @@ $("#comment_upload_btn").click(async function () {
     let isDelete = false;
 
     let doc = {
-        'member': member,
-        'commenter': commenter,
-        'content': content,
-        'date': date,
-        'isDelete': isDelete,
+        'member': member,  // 현재 모달창의 주인
+        'commenter': commenter,  // 댓글 작성자
+        'content': content,  // 댓글 내용
+        'date': date,  // 댓글 작성 날짜(시간)
+        'isDelete': isDelete,  // 삭제된 댓글 유무
     };
     await addDoc(collection(db, "9to9_Team_Intro"), doc);
     alert('등록완료!');
