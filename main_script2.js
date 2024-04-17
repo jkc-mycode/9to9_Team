@@ -10,3 +10,15 @@ window.onclick = function (event) {
         event.target.style.display = "none";
     }
 };
+
+/*엄혜인 이모티콘 있는 아코디언 누르면 mbti 성격, 장점, 협업 스타일 누르면 나타나개 하기*/
+function openclose_1() {
+    $('#mbtiEom_contens').toggle();
+}
+
+function openclose_2() {
+    $('#Advantages_contens').toggle();
+}
+function openclose_3() {
+    $('#Cooperation_contens').toggle();
+}

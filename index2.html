@@ -7,7 +7,6 @@
     <title>9to9 팀 소개 페이지</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="./main_style.css" />
     <!--엄혜인 css연결, iconcss 연결-->
     <link rel="stylesheet" href="./main_style2.css" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -303,93 +302,49 @@
                             </a>
                         </div>
                     </div>
-                    <!--나의 소개 성격부분
-                    <div class="accordion" id="accordionExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    나의 MBTI 및 성격
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    나의 성격은 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    나의 장점
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    나의 장점은 뭐시다냐
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    나의 협업 스타일
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    나의 협업 스타일은
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    -->
                     <!--나의 소개 성격부분-->
                     <div class="mystyleEom">
                         <div class="mystyleEom_accordion">
-
                             <input type="radio" name="accordion" id="mbtiEom">
                             <label for="mbtiEom" class="personalityEom">
-                                <div class="accordion_head">
-                                    <i class='bx bx-happy-beaming' id="smile_icon"></i>
-                                    <h1 class="accordion-title">나의 MBTI 및 성격</h1>
+                                <div class="accordion_head_1" onclick="openclose_1()">
+                                    <button class="accordion_btn1" id="accordion_btn01">
+                                        <i class='bx bx-palette' id="palette_icon"></i>
+                                        <h1 class="accordion-title">나의 MBTI 및 성격</h1>
+                                    </button>
                                 </div>
-                                <div class="accordion_body">
-                                    <p class="accordion_text">나의 성격 설명 블라블라블라ㅓㅁ라ㅣ엄ㄴ아ㅣ러야ㅏㅁ로ㅓㅏㅓㅁㅇ노라ㅓㅇ노러ㅏ</p>
+                                <div class="accordion_body" id="mbtiEom_contens">
+                                    <p class="accordion_text"> 내향적이지만 소통하는 거 좋아합니다. 말수는 적지만 손은 빨라요.. </p>
                                 </div>
                             </label>
-
-                            <input type="radio" name="accordion" id="mbtiEom">
-                            <label for="mbtiEom" class="personalityEom">
-                                <div class="accordion_head">
-                                    <i class='bx bx-happy-beaming' id="smile_icon"></i>
-                                    <h1 class="accordion-title">나의 장점</h1>
+                            <input type="radio" name="accordion" id="Advantages">
+                            <label for="Advantages" class="AdvantagesEom">
+                                <div class="accordion_head_2" onclick="openclose_2()">
+                                    <button class="accordion_btn2" id="accordion_btn02">
+                                        <i class='bx bx-happy-beaming' id="smile_icon"></i>
+                                        <h1 class="accordion-title">나의 장점</h1>
+                                    </button>
                                 </div>
-                                <div class="accordion_body">
-                                    <p class="accordion_text">나의 장점은 뭐가 있지;</p>
+                                <div class="accordion_body" id="Advantages_contens">
+                                    <p class="accordion_text"></p>
                                 </div>
                             </label>
-
-                            <input type="radio" name="accordion" id="mbtiEom">
-                            <label for="mbtiEom" class="personalityEom">
-                                <div class="accordion_head">
-                                    <i class='bx bx-message-dots' id="smile_icon"></i>
-                                    <h1 class="accordion-title">나의 협업 스타일</h1>
+                            <input type="radio" name="accordion" id="Cooperation">
+                            <label for="Cooperation" class="CooperationEom">
+                                <div class="accordion_head_3" onclick="openclose_3()">
+                                    <button class="accordion_btn3" id="accordion_btn03">
+                                        <i class='bx bx-group' id="group_icon"></i>
+                                        <h1 class="accordion-title">나의 협업 스타일</h1>
+                                    </button>
                                 </div>
-                                <div class="accordion_body">
-                                    <p class="accordion_text">나의 협업 스타일은 무엇이지;</p>
+
+                                <div class="accordion_body" id="Cooperation_contens">
+                                    <p class="accordion_text"></p>
                                 </div>
                             </label>
                         </div>
                     </div>
-
-
-
+                    <!--게시판 작성란-->
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -434,7 +389,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-    <script src="./main_script.js"></script>
     <script src="./main_script2.js"></script> <!--엄혜인-->
 </body>
 

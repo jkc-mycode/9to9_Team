@@ -188,7 +188,6 @@
     align-items: center;
     position: relative;
 }
-
 .introductionEom p {
     font-size: 15px;
     text-align: center;
@@ -214,7 +213,6 @@
     border: none;
     
 }
-
 .archivingEom img {
     height: 40px;
     width: 40px;
@@ -222,20 +220,14 @@
 }
 
 
-/*나의 소개 부분 아코디언
-.accordion {
-    float:left;
-    
-}
-*/
-
+/*나의 소개 부분 아코디언*/
 .mystyleEom {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     transform: all 0.25s case;
 
-    min-height: 100vh;
+    min-height: 100px;
     min-width: 500px; 
     display: flex;
     
@@ -243,33 +235,36 @@
     justify-content: center;
     padding: 50px;
     background-color: #81BEF7;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
 
 }
 
 .mystyleEom_accordion {
-    width: 400px;
+    width: 600px;
 }
 
 .mystyleEom_accordion input {
-    
     display: none;
 }
 
 .personalityEom {
-    --hue: 205;
-    --title-color: hsl(var(--hue), 98%, 20%); /*hsl색깔 변경하면됨*/
-    
-    --i-color: hsl(var(--hue), 98%, 40%);
-    --bg: hsla(var(--hue), 98%, 50%, 0.2);
-
     position: relative;
     display: block;
     cursor: pointer;
-    margin-bottom: 10px;
-
+    margin-bottom: 0px;
 }
 
-.accordion_head {
+.mystyleEom h1{
+    font-size: 20px;
+}
+
+.accordion_head_1 .accordion_btn1{
     background: white;
     display: flex;
     justify-content: flex-start;
@@ -277,38 +272,95 @@
     padding: 20px;
     border: 1px solid transparent;
     border-radius: 10px;
-    box-shadow: 0 5px 10px hsl(0, 0% 0%, 0.06);
+    box-shadow: 0px 0px 3px 0px #81BEF7;
+    width: 600px;
 }
 
-.accordion_head:hover {
-    border-color: val(--i-color);
-}
 
-#smile_icon {
+#palette_icon {
     font-size: 20px;
     margin-right: 15px;
-    color: val(--i-color)
+    color: navy;
 }
 
 .accordion-title {
     font-size: 20px;
     font-weight: 700;
-    color: val(--title-color);
+    color: black;
 }
 
+/*자바스크립트 해야됨 height 120px이면 accordion_body height는 0px
 .accordion_body{
-    height: 120px;
+    height: 100px;
     overflow: hidden;
-}
+}*/
 
 .accordion_text {
-    background: var(--bg);
-    border: 1px solid var(--bg);
+    box-shadow: 0px 0px 3px 0px #81BEF7;
+    background: rgba(255, 255, 255, -1);
+    backdrop-filter: blur(30px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     margin-top: 5px;
     padding: 15px 20px;
-    color: #0009;
+    color: white;
     font-weight: 600;
 }
 
-/*https://www.youtube.com/watch?v=qgYYg4unBFw*/
+/*나의 장점*/
+.accordion_head_2 .accordion_btn2{
+    background: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px 0px #81BEF7;
+    width: 600px;
+}
+
+#smile_icon {
+    font-size: 20px;
+    margin-right: 15px;
+    color: navy;
+}
+.AdvantagesEom {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    margin-bottom: 0px;
+}
+
+
+/*나의 협업스타일*/
+.accordion_head_3 .accordion_btn3{
+    background: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px 0px #81BEF7;
+    width: 600px;
+}
+
+#group_icon {
+    font-size: 20px;
+    margin-right: 15px;
+    color: navy;
+}
+.CooperationEom {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    margin-bottom: 0px;
+}
+
+/*자바스크립트 해야됨 height 120px이면 accordion_body height는 0px 반응형도 해야됨
+:is(#mbtiEom #Advantages, #Cooperation):checked + .personalityEom .accordion_body {
+    height: 120px;
+
+}
+*/
