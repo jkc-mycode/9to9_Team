@@ -10,17 +10,22 @@ import { firebaseConfig } from "./secret.js"
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
+// 현재 모달창이 누구꺼인지 저장하기 위한 변수
 let member = "";
 
+// 더 보기 버튼 클릭 시 동작 (댓글 출력을 위해 사용)
 $('.about').click(async function() {
     member = $(this).next("input").val();
     console.log(member);
 
+    // 댓글 리스트를 출력하기 전에 비워두기 위한 함수
     $('#comment_list').empty();
+
     let docs = await getDocs(query(collection(db, "9to9_Team_Intro"), orderBy("date")));
     docs.forEach((doc) => {
         let row = doc.data();
 
+        // 현재 모달의 주인과 row의 데이터가 같고 isDelete가 false일 때 댓글 출력
         if (row['member'] == member && row['isDelete'] == false) {
             let commenter = row['commenter'];
             let content = row['content'];
@@ -62,6 +67,7 @@ $('.about').click(async function() {
 })
 
 
+// 댓글 등록하는 버튼 클릭 시 동작
 $("#comment_upload_btn").click(async function () {
     let commenter = $('#floatingInputName').val();
     let content = $('#floatingTextarea2Content').val();
