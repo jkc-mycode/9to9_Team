@@ -7,7 +7,7 @@
     <title>9to9 팀 소개 페이지</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="./main_style2.css" />
+    <link rel="stylesheet" href="./main_style.css" />
 </head>
 
 <body>
@@ -41,23 +41,23 @@
             </div>
             <div class="col">
                 <div class="card">
-                    <img src="./imgs/김정찬_아바타.png" class="card-img-top" alt="...">
+                    <img src="./imgs/홍성빈_아바타2.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">팀원 홍성빈</h5>
                         <br>
                         <p class="">MBTI : ESFJ <br> 소개 : 나는야 개발자!</p>
-                        <button class="about">더 보기</button>
+                        <button class="about" data-bs-toggle="modal" data-bs-target="#exampleModal2">더 보기</button>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card">
-                    <img src="./imgs/hyein/엄혜인_아바타.png" class="card-img-top" alt="...">
+                    <img src="./imgs/김정찬_아바타.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">팀원 엄혜인</h5>
                         <br>
-                        <p class="">MBTI : ISFP <br> 소개 : 호기심많고 새로운 도전을 즐기는 개발자!</p>
-                        <button class="about" data-bs-toggle="modal" data-bs-target="#exampleModal_3">더 보기</button>
+                        <p class="">MBTI : ISFP <br> 소개 : 나는야 개발자!</p>
+                        <button class="about">더 보기</button>
                     </div>
                 </div>
             </div>
@@ -140,47 +140,141 @@
             </div>
         </div>
     </div>
-    <!-- 모달2 -->
-    <!-- 모달3  엄혜인-->
-    <div class="modal fade" id="exampleModal_3" tabindex="-1" aria-labelledby="exampleModalLabel_3" aria-hidden="true">
+    <!-- 모달2 (홍성빈) -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">팀원 엄혜인</h1>
+
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <!--
-                    <div class="aboutmeEom">
-                        <div class="imageEom">
-                            <img src="./imgs/hyein/엄혜인_아바타_배경X.png" alt="엄혜인 아바타 배경없는 이미지">
-                        </div>
-                        <div class="introductionEom">
-                            <h1>엄혜인</h1>
-                            <p>호기심많고  새로운 도전을 즐기는 개발자!</p>
-                        </div>
+
+                <style>
+
+                    .textarea{
                         
-                        <div class="archivingEom">
-                            <a href="https://github.com/Eomhyein/" target = "_blank">
-                                <button class="githubEom" type="button">
-                                    <img src="./imgs/hyein/03_GitHub.jpg" alt="깃허브이미지">
-                                </button>
-                            </a>
-                            <a href="https://blog.naver.com/mickey_8688" target = "_blank">
-                                <button class="naverblogEom" type="button">
-                                    <img src="./imgs/hyein/02_naver blog_logo_02.jpg" alt="네이버블로그이미지">
-                                </button>
-                            </a>
+                        position: absolute;
+                        bottom: 200px;
+                        left: 180px;
+
+                    }
+
+                    .modal-body > img{
+
+                        position:absolute;
+                        bottom: 300px;
+                        left: 130px;
+                    }
+                    
+                    .accordion-item {
+
+                        padding: 20px;
+                        margin-left: 500px;
+                    
+                    }
+
+                    .mb-3{
+
+                        
+                        padding: 20px;
+                        margin-left: 520px;
+
+                    }
+                  
+                </style>
+
+                <div class="modal-body">
+
+                    <img src="./imgs/홍성빈_아바타2.png" alt="홍성빈_아바타2" />
+                    
+                    <div class="textarea">
+
+                          <h1 > 홍성빈 <h1>
+
+                            
+                    </div>
+                   
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                <strong> 나의 MBTI 및 성격 </strong> 
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong> ESFJ 친선도모형 </strong> 어디 모난곳 없고 두루 두루 다 친하게 지냅니다
+                            </div>
                         </div>
                     </div>
-                    -->
+                    </button>
+                    </h2>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <strong> 나의 장점 </strong>
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>의견 교환이 원할한 스타일</strong> 거의 모든 의견을 수용하려고 노력하려고 합니다 다수결의 원칙을 따르더라도 어느정도
+                                소수에대한 의견도 받아들여 합의점을 찾기위해 많이 노력합니다
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <strong>   나의 협업 스타일 </strong> 
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>주제 정하기 , 아이디어 내기.</strong> 주제나 아이디어같은걸 먼저 내서 문제 방식을 해결하거나 고민하는것을 해결하는
+                                스타일입니다.
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+
+                    </p>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">닉네임 작성란</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="아무거나 써주세요">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">응원글 작성란</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      </div>
+
+            
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
+
+
+
+            </div>
+
+
+
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
+    </div>
+
+
+    <!-- 모달3 -->
     <!-- 모달4 (이장현) -->
     <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
         <div class="modal-dialog modal-xl">
@@ -217,7 +311,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-    <script src="./main_script2.js"></script>
+    <script src="./main_script.js"></script>
 </body>
 
 </html>
