@@ -41,8 +41,8 @@
                     <div class="card-body">
                         <h5 class="card-title">팀장 김정찬</h5>
                         <br>
-                        <p class="">MBTI : ISFJ <br> 소개 : 나는야 개발자!</p>
-                        <button class="about" data-bs-toggle="modal" data-bs-target="#exampleModal1">더 보기</button>
+                        <p class="main_mbti_intro">MBTI : ISFJ <br> 소개 : 나는야 백엔드 개발자!</p>
+                        <button class="about btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#exampleModal1">더 보기</button>
                         <!-- 더 보기 클릭 시 이 모달이 누구꺼인지 전달하기 위한 input 태그 -->
                         <input type="hidden" value="김정찬">
                     </div>
@@ -54,32 +54,31 @@
                     <div class="card-body">
                         <h5 class="card-title">팀원 홍성빈</h5>
                         <br>
-                        <p class="">MBTI : ESFJ <br> 소개 : 나는야 개발자!</p>
-                        <button class="about" data-bs-toggle="modal" data-bs-target="#exampleModal2">더 보기</button>
+                        <p class="main_mbti_intro">MBTI : ESFJ <br> 소개 : 나는야 개발자!</p>
+                        <button class="about btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#exampleModal2">더 보기</button>
                         <input type="hidden" value="홍성빈">
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card member_card">
-                    <img src="./imgs/김정찬_아바타.png" class="card-img-top" alt="...">
+                <div class="card member_card" style="padding: 20px 20px 0px 20px;">
+                    <img src="./imgs/hyein/엄혜인_아바타.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">팀원 엄혜인</h5>
                         <br>
-                        <p class="">MBTI : ISFP <br> 소개 : 나는야 개발자!</p>
-                        <button class="about">더 보기</button>
-                        <input type="hidden" value="엄혜인">
+                        <p class="main_mbti_intro">MBTI : ISFP <br> 소개 : 호기심많고 새로운 도전을 즐기는 개발자!</p>
+                        <button class="about btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#exampleModal_3">더 보기</button>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card member_card">
-                    <img src="./imgs/김정찬_아바타.png" class="card-img-top" alt="...">
+                    <img src="./imgs/Jh/ljh.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">팀원 이장현</h5>
                         <br>
-                        <p class="">MBTI : ESTP <br> 소개 : 나는야 개발자!</p>
-                        <button class="about" data-bs-toggle="modal" data-bs-target="#exampleModal4">더 보기</button>
+                        <p class="main_mbti_intro">MBTI : ESTP <br> 소개 : 나는야 개발자!</p>
+                        <button class="about btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#exampleModal4">더 보기</button>
                     </div>
                 </div>
             </div>
@@ -89,8 +88,8 @@
                     <div class="card-body">
                         <h5 class="card-title">팀원 박순호</h5>
                         <br>
-                        <p class="">MBTI : ISTP <br> 소개 : 나는야 개발자!</p>
-                        <button class="about">더 보기</button>
+                        <p class="main_mbti_intro">MBTI : ISTP <br> 소개 : 나는야 개발자!</p>
+                        <button class="about btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#exampleModal5">더 보기</button>
                     </div>
                 </div>
             </div>
@@ -342,31 +341,150 @@
             </div>
         </div>
     </div>
-    <!-- 모달3 -->
+    <!-- 모달3 (엄혜인) -->
+    <div class="modal fade" id="exampleModal_3" tabindex="-1" aria-labelledby="exampleModalLabel_3" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header modal3_header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!--나의 소개 아바타있는부분-->
+                    <div class="aboutmeEom">
+                        <img src="./imgs/hyein/엄혜인_아바타_배경X.png" class="imageEom" alt="엄혜인 아바타 배경없는 이미지">
+                        <h1 class="introductionEom_title">엄혜인</h1>
+                        <div class="introductionEom">
+                            <p class="introductionEom_text">호기심많고 새로운 도전을 즐기는 개발자! </p>
+                        </div>
+                        <div class="archivingEom">
+                            <a href="https://blog.naver.com/mickey_8688" target="_blank">
+                                <button class="githubeEom" type="button"><img src="./imgs/깃허브_아이콘.png"
+                                        alt="깃허브이미지"></button>
+                            </a>
+                            <a href="https://blog.naver.com/mickey_8688" target="_blank">
+                                <button class="naverblogEom" type="button"><img src="./imgs/hyein/02_naver blog_01.png"
+                                        alt="네이버블로그이미지"></button>
+                            </a>
+                        </div>
+                    </div>
+                    <!--나의 소개 성격부분-->
+                    <div class="mystyleEom">
+                        <div class="mystyleEom_accordion">
+                            <input type="radio" name="accordion" id="mbtiEom">
+                            <label for="mbtiEom" class="personalityEom">
+                                <div class="accordion_head_1" id="accordion_openclose1">
+                                    <button class="accordion_btn1" id="accordion_btn01">
+                                        <i class='bx bx-palette' id="palette_icon"></i>
+                                        <h1 class="accordion-title">나의 MBTI 및 성격</h1>
+                                    </button>
+                                </div>
+                                <div class="accordion_body" id="mbtiEom_contens">
+                                    <p class="accordion_text">낯을 가리지만 소통하는 것을 좋아하며 친해지면 거리낌없이 장난도 아주 잘 칩니다. <br>
+                                        ISFP : 적응력이 뛰어난 현실주의자! 
+                                    </p>
+                                </div>
+                            </label>
+                            <input type="radio" name="accordion" id="Advantages">
+                            <label for="Advantages" class="AdvantagesEom">
+                                <div class="accordion_head_2" id="accordion_openclose2">
+                                    <button class="accordion_btn2" id="accordion_btn02">
+                                        <i class='bx bx-happy-beaming' id="smile_icon"></i>
+                                        <h1 class="accordion-title">나의 장점</h1>
+                                    </button>
+                                </div>
+                                <div class="accordion_body" id="Advantages_contens">
+                                    <p class="accordion_text">관심을 가지는 분야에 끝까지 파고드는 성격으로 목표를 꼭 이루고자 하는 강한 집념을 가지고 있습니다.  </p>
+                                </div>
+                            </label>
+                            <input type="radio" name="accordion" id="Cooperation">
+                            <label for="Cooperation" class="CooperationEom">
+                                <div class="accordion_head_3" id="accordion_openclose3">
+                                    <button class="accordion_btn3" id="accordion_btn03">
+                                        <i class='bx bx-group' id="group_icon"></i>
+                                        <h1 class="accordion-title">나의 협업 스타일</h1>
+                                    </button>
+                                </div>
+
+                                <div class="accordion_body" id="Cooperation_contens">
+                                    <p class="accordion_text">새로운 것을 알아가는데 성취감을 느끼며 원활하게 잘 소통하려고 하는 의지가 있습니다.  
+                                    </p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- 모달4 (이장현) -->
     <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <div class="modal-header modal4_header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">상세정보</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="jcard">
-                        <img src="./imgs/이장현.jpg" class="jcard-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="jcard-title">이장현</h5>
-                            <div class="jcard-text">
-                                <p>안녕하세요.</p>
-                                <p>개발자를 꿈꾸는 이장현입니다.</p>
+                    <div class="Profile_Body_L">
+                        <img src="./imgs/Jh/ljh_no_back.png" class="Profile_Img" alt="캐릭터 이미지">
+                        <div class="Profile_Page">
+                            <!-- 이름 -->
+                            <div class="Profile_Name">
+                                <div class="Badge_Name">
+                                <span class="badge rounded-pill bg-success">팀원</span>
+                                <span class="badge rounded-pill badge bg-warning">뉴비</span>
+                                <span class="badge rounded-pill bg-secondary">ESTP</span>
                             </div>
-                            <div class="linkbutton">
-                                <a href="#" class="btn btn-primary">깃허브</a>
-                                <a href="#" class="btn btn-primary">블로그</a>
+                                <h5 class="P_Name">이장현</h5>
+                                <!-- 추가정보 -->
+                                <div class="Profile_Info">
+                                    <div class="Profile_Info_Body">
+                                        <li class="tag1">개발자를 꿈꾸다!</li>
+                                        <li class="tag2">왈왈! 왈왈왈왈!</li> <br />
+                                        <li class="tag1">사용하는 언어</li>
+                                        <span class="badge bg-danger">HTML</span>
+                                        <span class="badge bg-warning">JavaScript</span>
+                                        <span class="badge bg-primary">CSS</span>
+                                    </div>
+                                    <div class="Link_Btn">
+                                        <a href="killiacaridos@gmail.com" target="_blank">
+                                            <button class="LK1" type="button">
+                                                <img src="./imgs/Jh/gmail.png" alt="gmail"></button>
+                                            </a>
+                                        <a href="https://github.com/JHLee0891" target="_blank">
+                                            <button class="LK2" type="button"><img src="./imgs/Jh/git.png"
+                                                    alt="git"></button>
+                                        </a>
+                                        <a href="https://velog.io/@jhyunl/posts" target="_blank">
+                                            <button class="LK3" type="button">
+                                                <img src="./imgs/Jh/velog.jpg" alt="velog"></button>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    <div class="Profile_Body_R">
+                        <div class="Profile_Page_R">
+                            <div class="Font_R"></div>
+                            <span class="badge bg-info text-dark">역활</span>
+                            <li class="tag1_R">Modal 분리 및 개인페이지 제작</li><br />
+                            <span class="badge bg-info text-dark">목표</span>
+                            <li class="tag1_R">다같이 프로젝트 잘 끝내기</li>
+                            <li class="tag1_R">수강 완주하기</li>
+                            <li class="tag1_R">코딩테스트 수준 높이기</li>
+                            <li class="tag1_R">게임개발 능력 올리기</li> <br />
+                            <span class="badge bg-info text-dark">하고싶은 말</span>
+                            <li class="tag1_R">처음 경험해보는 주제이기에 흥미로우면서 머리가 아픕니다.</li>
+                            <li class="tag1_R">하지만 이러한 아픔이 좋은 경험으로 되돌아올 수 있게 최선을 다하겠습니다.</li>
+                            <li class="tag1_R">모두 화이팅!</li>
                             </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
