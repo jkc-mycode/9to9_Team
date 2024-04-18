@@ -1,17 +1,17 @@
-// 김정찬
-const modal1= $("#exampleModal1").html (``)
+// // 김정찬
+// const modal1= $("#exampleModal1").html (``)
 
-//홍성빈
-const modal2= $("#exampleModal2").html (``)
+// //홍성빈
+// const modal2= $("#exampleModal2").html (``)
 
-//엄혜원
-const modal3= $("#exampleModal3").html (``)
+// //엄혜원
+// const modal3= $("#exampleModal3").html (``)
 
-//이장현
-const modal4= $("#exampleModal4").html (``)
+// //이장현
+// const modal4= $("#exampleModal4").html (``)
 
-//박순호
-const modal5= $("#exampleModal5").html (``)
+// //박순호
+// const modal5= $("#exampleModal5").html (``)
 
 
 

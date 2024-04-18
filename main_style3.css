@@ -63,80 +63,190 @@
 
 /* 이장현 */
 /* 카드 본체 */
-.jcard {
-    width: 20rem;
-    height: 800px;
+.modal-header {
+    background-color: rgb(121, 201, 141);
+}
+.modal-body {
+    max-height: fit-content;
+    overflow-y: auto;
+}
+.tab-content {
+    height: 620px;
+    padding: 10px;
+}
 
-    margin: 50px auto 0px auto;
-    padding: 20px;
+.Profile_Body_L {
+        width: 400px;
+        height: 700px;
+        border-color: #e2e2e2;
+        background-image: url('./imgs/Jh/back1.jpg');
+        backdrop-filter: blur(20px);
+        border: 2px solid rgba(252, 244, 244, 0.842);
+        margin: 0px auto 0px auto;
+        padding: 20px;
+        box-shadow: 0px 0px 3px 0px gray;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        float: left;
+        position: fixed;    
+}
+
+
+.Profile_Img {
+    height: 200px;
+    border: none;
+    position: relative;
+}
+
+
+.Profile_Page {
+    text-decoration: none;
+    color: white;
+    position: relative
+}
+
+/* 직위 */
+.Profile_Name > .badge {
+    font-size: 14px; /* 원하는 크기로 조정 */
+    margin-bottom: 9px;
+    font-weight: normal;
+}
+
+.Profile_Name {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    border: 1px solid black;
-    outline-style: outset;
 }
-
-/* 카드 이미지 */
-.jcard > img {
-    border-radius: 50%;
-    border: 1px solid black;
-}
-
-/* 카드 이름 */
-.jcard-title {
+.P_Name {
+    width: 100px;
+    background-color: (0, 0, 0, 1);
+    backdrop-filter: blur(20px);
+    font-weight: bold;
+    padding: 3px;
+    border-radius: 5px;
+    border: 1px solid rgba(56, 53, 53, 0.842);
+    box-shadow: 0px 0px 10px 0px rgb(124, 123, 123);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0px auto 0px auto;
+    margin-top: 10px;
 }
 
 
-.jcard-text {
-    border-radius: 10px;
-
-    margin: 50px auto 0px auto;
-    padding: 30px;
-
-    border: 1px solid black;
+.Profile_Info {
+    width: 350px;
+    height: 271px;
+    margin-top: 20px;
+    background-color: (0, 0, 0, 1);
+    border: 1px solid rgba(56, 53, 53, 0.842);
+    box-shadow: 0px 0px 10px 0px gray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(20px);
 }
 
-.linkbutton {
+.tag1 {
+    list-style-type: none;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tag2 {
+    list-style-type: none;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*블로그 버튼*/
+.Link_Btn {
     padding: 20px;
-    margin-right: 5px;
-
+    margin: 0px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
+.LK1 {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none; 
+}
+.LK2 {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none; 
+}
+
+.Link_Btn img {
+    height: 40px;
+    width: 40px;
+}
 
 
 
-/* 모달 창 */
-/* .modal {
-    background-color: gray;
-    position:absolute;
-    display:none;
-
+.Profile_Body_R {
+    height: 700px;
+    width: 700px; 
+    float: right;
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(252, 244, 244, 0.842);
+    margin: 0px auto 0px auto;
+    box-shadow: 0px 0px 3px 0px gray;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    top:0;
-    left:0;
+    background-image: url('./imgs/Jh/back2.jpg');
 
-    width:100%;
-    height:100%;
-    opacity: 0.9;
 }
 
-.modal_body {
-    border: 1px solid black;
+.Profile_Page_R {
+    position: relative;
+    width: 600px;
+    height: 550px;
+    background-color: (0, 0, 0, 1);
+    border: 1px solid rgba(56, 53, 53, 0.842);
+    box-shadow: 0px 0px 10px 0px gray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(20px);
 }
 
-.modal_content {
-    background-color: white;
-    width: 100px;
-    height: 100px;
-    opacity: 1.5;
-} */
+
+.tag1_R {
+    color: white;
+    list-style-type: none;
+}
+
+.tag1_R, .btn {
+    display: inline-block;
+}
+
+.Profile_Page_R > .button {
+    position: fixed; 
+}
