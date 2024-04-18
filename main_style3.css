@@ -79,7 +79,7 @@
         width: 400px;
         height: 700px;
         border-color: #e2e2e2;
-        background-image: url('./imgs/Jh/back1.jpg');
+        background-image: url('./imgs/Jh/111.jpg');
         backdrop-filter: blur(20px);
         border: 2px solid rgba(252, 244, 244, 0.842);
         margin: 0px auto 0px auto;
@@ -154,6 +154,10 @@
     backdrop-filter: blur(20px);
 }
 
+.Profile_Info_Body {
+    margin-bottom: 20px;
+}
+
 .tag1 {
     list-style-type: none;
     font-size: 20px;
@@ -181,6 +185,7 @@
     align-items: center;
     justify-content: center;
 }
+
 .LK1 {
     background-color: transparent;
     background-repeat: no-repeat;
@@ -189,6 +194,7 @@
     overflow: hidden;
     outline: none; 
 }
+
 .LK2 {
     background-color: transparent;
     background-repeat: no-repeat;
@@ -197,6 +203,16 @@
     overflow: hidden;
     outline: none; 
 }
+
+.LK3 {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none; 
+}
+
 
 .Link_Btn img {
     height: 40px;
