@@ -213,65 +213,59 @@ header {
 
 
 /* 홍성빈 모달 */
-#exampleModal2 > .btn {
-    padding: 20px 20px;
+.btn12 {
+    position: relative;
+    right:20px;
+    bottom: 20px;
+
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
 }
 .modalbutton {
     padding: 20px 20px;
-    position: absolute;
-    bottom: 300px;
-    left: 170px;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    top: 60px;
+    left: 40px;
 
     background-image: url(imgs/깃허브버튼.png);
     background-position: center;
     background-size: cover;
 } 
 .modalbutton2 {
+    position: relative;
+    width: 50px;
+    height: 50px;
+
     padding: 20px 20px;
-    position: absolute;
-    bottom: 300px;
-    left: 250px;
+    top: 10px;
+    left: 110px;
     background-image: url(imgs/네이버버튼.png);
     background-position: center;
     background-size: cover;
 }
 .textarea1 {
-    position: absolute;
-    bottom:400px;
-    left: 190px;
+    position: relative;
+    top : 0px;
+    left: 50px;
 }
-.modal-body > img {
-    float: top;
-    margin-left: 120px;
-    position: absolute;
+.modal2_body {
+    position: relative;
+    top:100px;
+    margin-left: 200px;
 }
+
 .accordion-item {
+    position: relative;
+    bottom: 530px;
+    right: 100px;
     padding: 20px;
     margin-left: 500px;
 }
-.comment_input_box1 > .mb-3 {
-    padding: 20px;
-    margin-left: 520px;
-}
-.comment_textarea1 {
-    resize: none; 
-    width: 600px;
-    margin-bottom: 10px;
-    margin-left: 300px;
-    float:right;
-    border: 1.5px solid black;
-    font-size: 20px;
-}
-.comment_btn1 {
-    margin-left: 500px;
-    float:right;
-}
-.comment_input_box1 {
-    width: auto;
-    height: 300px;
-    padding-left: 20px;
-    padding-right: 20px;
-} 
+
 
 
 
