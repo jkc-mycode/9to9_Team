@@ -32,7 +32,7 @@
             </div>
         </div>
     </header>
-    
+
     <div class="main">
         <div class="row row-cols-1 row-cols-md-5 g-4">
             <div class="col">
@@ -42,7 +42,8 @@
                         <h5 class="card-title">팀장 김정찬</h5>
                         <br>
                         <p class="main_mbti_intro">MBTI : ISFJ <br> 소개 : 나는야 백엔드 개발자!</p>
-                        <button class="about btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#exampleModal1">더 보기</button>
+                        <button class="about btn btn-outline-warning" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal1">더 보기</button>
                         <!-- 더 보기 클릭 시 이 모달이 누구꺼인지 전달하기 위한 input 태그 -->
                         <input type="hidden" value="김정찬">
                     </div>
@@ -55,7 +56,8 @@
                         <h5 class="card-title">팀원 홍성빈</h5>
                         <br>
                         <p class="main_mbti_intro">MBTI : ESFJ <br> 소개 : 나는야 개발자!</p>
-                        <button class="about btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#exampleModal2">더 보기</button>
+                        <button class="about btn btn-outline-warning" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal2">더 보기</button>
                         <input type="hidden" value="홍성빈">
                     </div>
                 </div>
@@ -67,7 +69,8 @@
                         <h5 class="card-title">팀원 엄혜인</h5>
                         <br>
                         <p class="main_mbti_intro">MBTI : ISFP <br> 소개 : 호기심많고 새로운 도전을 즐기는 개발자!</p>
-                        <button class="about btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#exampleModal_3">더 보기</button>
+                        <button class="about btn btn-outline-warning" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal_3">더 보기</button>
                     </div>
                 </div>
             </div>
@@ -78,18 +81,20 @@
                         <h5 class="card-title">팀원 이장현</h5>
                         <br>
                         <p class="main_mbti_intro">MBTI : ESTP <br> 소개 : 나는야 개발자!</p>
-                        <button class="about btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#exampleModal4">더 보기</button>
+                        <button class="about btn btn-outline-warning" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal4">더 보기</button>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card member_card">
-                    <img src="./imgs/김정찬_아바타.png" class="card-img-top" alt="...">
+                    <img src="./imgs/박순호_아바타.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">팀원 박순호</h5>
                         <br>
                         <p class="main_mbti_intro">MBTI : ISTP <br> 소개 : 나는야 개발자!</p>
-                        <button class="about btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#exampleModal5">더 보기</button>
+                        <button class="about btn btn-outline-warning" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal5">더 보기</button>
                     </div>
                 </div>
             </div>
@@ -99,16 +104,17 @@
     <div class="footer">
         <!-- 댓글 기능 구현 -->
         <div class="comment_box">
+            <div class="comment_box_title_box">
+                <h1 class="comment_box_title">&lt;방명록&gt;</h1>
+            </div>
             <div class="comment_input_box">
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control comment_name" id="floatingInputName"
-                        placeholder="홍길동">
+                    <input type="text" class="form-control comment_name" id="floatingInputName" placeholder="홍길동">
                     <label for="floatingInputName">이름</label>
                 </div>
                 <div class="form-floating">
                     <textarea class="form-control comment_textarea" placeholder="Leave a comment here"
-                        id="floatingTextarea2Content"
-                        style="height: 100px; font-size: 20px;"></textarea>
+                        id="floatingTextarea2Content" style="height: 100px; font-size: 20px;"></textarea>
                     <label for="floatingTextarea2Content">응원 한 마디 남겨주세요!!</label>
                 </div>
                 <button type="button" id="comment_upload_btn" class="btn btn-primary comment_btn">등록하기</button>
@@ -225,7 +231,7 @@
                                 </p>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -234,7 +240,7 @@
             </div>
         </div>
     </div>
-    <!-- 모달2 -->
+    <!-- 모달2 (홍성빈) -->
     <script>
         function btnopen() {
             window.open('https://github.com/rodlsdyd');
@@ -247,7 +253,7 @@
     <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-scrollable">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header modal12_header">
                     <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -356,7 +362,7 @@
                                 </div>
                                 <div class="accordion_body" id="mbtiEom_contens">
                                     <p class="accordion_text">낯을 가리지만 소통하는 것을 좋아하며 친해지면 거리낌없이 장난도 아주 잘 칩니다. <br>
-                                        ISFP : 적응력이 뛰어난 현실주의자! 
+                                        ISFP : 적응력이 뛰어난 현실주의자!
                                     </p>
                                 </div>
                             </label>
@@ -369,7 +375,8 @@
                                     </button>
                                 </div>
                                 <div class="accordion_body" id="Advantages_contens">
-                                    <p class="accordion_text">관심을 가지는 분야에 끝까지 파고드는 성격으로 목표를 꼭 이루고자 하는 강한 집념을 가지고 있습니다.  </p>
+                                    <p class="accordion_text">관심을 가지는 분야에 끝까지 파고드는 성격으로 목표를 꼭 이루고자 하는 강한 집념을 가지고 있습니다.
+                                    </p>
                                 </div>
                             </label>
                             <input type="radio" name="accordion" id="Cooperation">
@@ -382,7 +389,7 @@
                                 </div>
 
                                 <div class="accordion_body" id="Cooperation_contens">
-                                    <p class="accordion_text">새로운 것을 알아가는데 성취감을 느끼며 원활하게 잘 소통하려고 하는 의지가 있습니다.  
+                                    <p class="accordion_text">새로운 것을 알아가는데 성취감을 느끼며 원활하게 잘 소통하려고 하는 의지가 있습니다.
                                     </p>
                                 </div>
                             </label>
@@ -410,10 +417,10 @@
                             <!-- 이름 -->
                             <div class="Profile_Name">
                                 <div class="Badge_Name">
-                                <span class="badge rounded-pill bg-success">팀원</span>
-                                <span class="badge rounded-pill badge bg-warning">뉴비</span>
-                                <span class="badge rounded-pill bg-secondary">ESTP</span>
-                            </div>
+                                    <span class="badge rounded-pill bg-success">팀원</span>
+                                    <span class="badge rounded-pill badge bg-warning">뉴비</span>
+                                    <span class="badge rounded-pill bg-secondary">ESTP</span>
+                                </div>
                                 <h5 class="P_Name">이장현</h5>
                                 <!-- 추가정보 -->
                                 <div class="Profile_Info">
@@ -429,7 +436,7 @@
                                         <a href="killiacaridos@gmail.com" target="_blank">
                                             <button class="LK1" type="button">
                                                 <img src="./imgs/Jh/gmail.png" alt="gmail"></button>
-                                            </a>
+                                        </a>
                                         <a href="https://github.com/JHLee0891" target="_blank">
                                             <button class="LK2" type="button"><img src="./imgs/Jh/git.png"
                                                     alt="git"></button>
@@ -457,7 +464,7 @@
                             <li class="tag1_R">처음 경험해보는 주제이기에 흥미로우면서 머리가 아픕니다.</li>
                             <li class="tag1_R">하지만 이러한 아픔이 좋은 경험으로 되돌아올 수 있게 최선을 다하겠습니다.</li>
                             <li class="tag1_R">모두 화이팅!</li>
-                            </div>
+                        </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         </div>
@@ -466,7 +473,73 @@
             </div>
         </div>
     </div>
-    <!-- 모달5 -->
+    <!-- 모달5 (박순호) -->
+    <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel5" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header modal5_header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal5_body_left">
+                        <img src="./imgs/박순호소개.png" class="modal5_body_left_img">
+                        <h1>
+                            팀원 박순호
+                        </h1>
+                    </div>
+                    <div class="modal5_body_right">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                    data-bs-target="#home-tab-pane" type="button" role="tab"
+                                    aria-controls="home-tab-pane" aria-selected="true">자기소개</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+                                    data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                    aria-controls="profile-tab-pane" aria-selected="false">나의 성격과 MBTI</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                                    data-bs-target="#contact-tab-pane" type="button" role="tab"
+                                    aria-controls="contact-tab-pane" aria-selected="false">나의 장점</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="disabled-tab" data-bs-toggle="tab"
+                                    data-bs-target="#disabled-tab-pane" type="button" role="tab"
+                                    aria-controls="disabled-tab-pane" aria-selected="false">나의 협업 스타일</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
+                                aria-labelledby="home-tab" tabindex="0">
+                                안녕하세요 저는 스파르타코딩 내일배움캠프 Node.js 5기 박순호입니다. 팀원들과 열심히 공부해서 모든 팀원들과 함께 좋은 결과 만들겠습니다.
+                            </div>
+                            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel"
+                                aria-labelledby="profile-tab" tabindex="0">
+                                <h3>나의 성격</h3>
+                                <p>나의 성격은 무던한 편이고 약간 내향적입니다</p>
+                                <h3>나의 MBTI</h3>
+                                <p>ISTP</p>
+                            </div>
+                            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel"
+                                aria-labelledby="contact-tab" tabindex="0">
+                                나의 장점은 상대방의 말을 잘 들어주고 이해하려고 한다.
+                            </div>
+                            <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel"
+                                aria-labelledby="disabled-tab" tabindex="0">
+                                나의 협업 스타일은 상대방의 개성을 존중하면서 자율적으로 협업한다.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
