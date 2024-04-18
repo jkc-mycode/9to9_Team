@@ -10,62 +10,55 @@ import { firebaseConfig } from "./secret.js"
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-// 현재 모달창이 누구꺼인지 저장하기 위한 변수
-let member = "";
+// 댓글 리스트를 출력하기 전에 비워두기 위한 함수
+$('.comment_list').empty();
 
-// 더 보기 버튼 클릭 시 동작 (댓글 출력을 위해 사용)
-$('.about').click(async function() {
-    member = $(this).next("input").val();
-    console.log(member);
+// 파이어베이스에서 데이터 가져오는 forEach문 (날짜 순으로 정렬해서 가져옴)
+let docs = await getDocs(query(collection(db, "9to9_Team_Intro"), orderBy("date")));
+docs.forEach((doc) => {
+    let row = doc.data();
 
-    // 댓글 리스트를 출력하기 전에 비워두기 위한 함수
-    $('#comment_list').empty();
+    // isDelete가 false일 때 댓글 출력
+    if (row['isDelete'] == false) {
+        let commenter = row['commenter'];
+        let content = row['content'];
+        let date = row['date'].toDate();
 
-    let docs = await getDocs(query(collection(db, "9to9_Team_Intro"), orderBy("date")));
-    docs.forEach((doc) => {
-        let row = doc.data();
+        // 날짜, 시간 포맷 변경하기
+        let year = date.getFullYear();
+        let month = ('0' + (date.getMonth() + 1)).slice(-2)
+        let days = ('0' + date.getDate()).slice(-2)
+        let hours = ('0' + date.getHours()).slice(-2)
+        let minutes = ('0' + date.getMinutes()).slice(-2)
+        let seconds = ('0' + date.getSeconds()).slice(-2)
 
-        // 현재 모달의 주인과 row의 데이터가 같고 isDelete가 false일 때 댓글 출력
-        if (row['member'] == member && row['isDelete'] == false) {
-            let commenter = row['commenter'];
-            let content = row['content'];
-            let date = row['date'].toDate();
-
-            // 날짜, 시간 포맷 변경하기
-            let year = date.getFullYear();
-            let month = ('0' + (date.getMonth() + 1)).slice(-2)
-            let days = ('0' + date.getDate()).slice(-2)
-            let hours = ('0' + date.getHours()).slice(-2)
-            let minutes = ('0' + date.getMinutes()).slice(-2)
-            let seconds = ('0' + date.getSeconds()).slice(-2)
-
-            let day = year + '-' + month + '-' + days + " " + hours + ":" + minutes + ":" + seconds
-            
-            let html_temp = `
-                <div class="comment">
-                    <div class="comment_left">
-                        <div class="commenter_info">
-                            <img class="comment_img" src="./imgs/comment_img.png">
-                            <div class="commenter_and_time">
-                                <p class="commenter">${commenter}</p>
-                                <p class="comment_time">${day}</p>
-                            </div>
-                        </div>
-                        <div class="comment_content">
-                            <p>${content}</p>
+        let day = year + '-' + month + '-' + days + " " + hours + ":" + minutes + ":" + seconds
+        
+        let html_temp = `
+            <hr class="border border-dark border-2" style="width: 100%;">
+            <div class="comment">
+                <div class="comment_left">
+                    <div class="commenter_info">
+                        <img class="comment_img" src="./imgs/comment_img.png">
+                        <div class="commenter_and_time">
+                            <p class="commenter" style="font-weight: bold">${commenter}</p>
+                            <p class="comment_time">${day}</p>
                         </div>
                     </div>
-                    <div class="comment_right">
-                        <!-- 댓글들을 구분하기 위해서 파이이베이스 각 필드의 id 값을 value에 넣어줌 -->
-                        <button value=${doc.id} type="button" class="btn btn-outline-danger comment_delete_btn">삭제</button>
+                    <div class="comment_content">
+                        <p style="font-weight: bold">${content}</p>
                     </div>
                 </div>
-                <hr class="border border-dark border-2" style="width: 648px;margin-left: -10px;">`
+                <div class="comment_right">
+                    <!-- 댓글들을 구분하기 위해서 파이이베이스 각 필드의 id 값을 value에 넣어줌 -->
+                    <button value=${doc.id} type="button" class="btn btn-outline-danger comment_delete_btn">삭제</button>
+                </div>
+            </div>
+            `
 
-            $('#comment_list').append(html_temp);
-        }
-    });
-})
+        $('#comment_list').append(html_temp);
+    }
+});
 
 
 // 댓글 등록하는 버튼 클릭 시 동작
@@ -78,7 +71,6 @@ $("#comment_upload_btn").click(async function () {
         let date = new Date();
         let isDelete = false;
         let doc = {
-            'member': member,  // 현재 모달창의 주인
             'commenter': commenter,  // 댓글 작성자
             'content': content,  // 댓글 내용
             'date': date,  // 댓글 작성 날짜(시간)

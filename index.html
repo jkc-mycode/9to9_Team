@@ -15,57 +15,65 @@
 <body>
     <header>
         <div class="header">
-            <div class="team_intro">
-                <h2>우리 팀 소개</h2>
-            </div>
             <div class="team_logo">
-                <h2>로고</h2>
+                <img src="./imgs/Team_logo.png">
             </div>
-            <div class="team_promise">
-                <h2>우리 팀 약속</h2>
+            <div class="card header_card">
+                <h5 class="card-header"><img class="mac_btn" src="./imgs/mac_btn.png"></h5>
+                <div class="card-body">
+                    <h3 class="card-title"><b>우리 팀 소개</b></h3><br>
+                    <p class="card-text" style="font-size: 22px; font-weight: bold; line-height: 2.0;">
+                        저희 9to9조는 Node.js 5기 웹개발과 게임서버개발을 공부하며 <br>
+                        프로젝트를 만드는 다양한 목표를 가진 팀원들이 모였습니다. <br>
+                        서로 성장하고 취업을 목표로, 기본 코딩능력과 팀워크를 키우며 <br>
+                        1인분 이상의 개발자로서 함께 발전할 것입니다.
+                    </p>
+                </div>
             </div>
         </div>
     </header>
-
+    
     <div class="main">
         <div class="row row-cols-1 row-cols-md-5 g-4">
             <div class="col">
-                <div class="card">
+                <div class="card member_card">
                     <img src="./imgs/김정찬_아바타.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">팀장 김정찬</h5>
                         <br>
                         <p class="">MBTI : ISFJ <br> 소개 : 나는야 개발자!</p>
-                        <button id="modal0_about" class="about" data-bs-toggle="modal" data-bs-target="#exampleModal1">더 보기</button>
+                        <button class="about" data-bs-toggle="modal" data-bs-target="#exampleModal1">더 보기</button>
                         <!-- 더 보기 클릭 시 이 모달이 누구꺼인지 전달하기 위한 input 태그 -->
                         <input type="hidden" value="김정찬">
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card">
-                    <img src="./imgs/김정찬_아바타.png" class="card-img-top" alt="...">
+                <div class="card member_card">
+                    <img src="./imgs/홍성빈_아바타2.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">팀원 홍성빈</h5>
                         <br>
                         <p class="">MBTI : ESFJ <br> 소개 : 나는야 개발자!</p>
-                        <button class="about">더 보기</button>
+                        <button class="about" data-bs-toggle="modal" data-bs-target="#exampleModal2">더 보기</button>
+                        <input type="hidden" value="홍성빈">
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card">
+                <div class="card member_card">
                     <img src="./imgs/김정찬_아바타.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">팀원 엄혜인</h5>
                         <br>
                         <p class="">MBTI : ISFP <br> 소개 : 나는야 개발자!</p>
                         <button class="about">더 보기</button>
+                        <input type="hidden" value="엄혜인">
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card">
+                <div class="card member_card">
                     <img src="./imgs/김정찬_아바타.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">팀원 이장현</h5>
@@ -76,7 +84,7 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card">
+                <div class="card member_card">
                     <img src="./imgs/김정찬_아바타.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">팀원 박순호</h5>
@@ -87,6 +95,31 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div style="width: 100%; height: 5px; background-color: rgb(255, 215, 83);"></div>
+    <div class="footer">
+        <!-- 댓글 기능 구현 -->
+        <div class="comment_box">
+            <div class="comment_input_box">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control comment_name" id="floatingInputName"
+                        placeholder="홍길동">
+                    <label for="floatingInputName">이름</label>
+                </div>
+                <div class="form-floating">
+                    <textarea class="form-control comment_textarea" placeholder="Leave a comment here"
+                        id="floatingTextarea2Content"
+                        style="height: 100px; font-size: 20px;"></textarea>
+                    <label for="floatingTextarea2Content">응원 한 마디 남겨주세요!!</label>
+                </div>
+                <button type="button" id="comment_upload_btn" class="btn btn-primary comment_btn">등록하기</button>
+                <input type="hidden" value="김정찬">
+            </div>
+            <div class="comment_list" id="comment_list">
+                <!-- 댓글 리스트가 들어갈 자리 -->
+            </div>
+        </div>
+        <div style="width: 100%; height: 50px;"></div>
     </div>
 
     <!-- 모달1 (김정찬) -->
@@ -106,7 +139,7 @@
                             저는 원래 일을 하다가 대학에 편입 후 컴공으로 올해 졸업했습니다.
                             하지만 너무 짧은 2년이었기에 더 많은 팀플과 소통을 통해 성장하고 싶어서
                             캠프에 지원하게 되었습니다!
-                        </p> <br><br>
+                        </p> <br>
                         <div class="modal1_body_left_footer">
                             <a href="https://github.com/jkc-mycode">
                                 <img src="./imgs/깃허브_아이콘.png" class="github_icon" />
@@ -195,27 +228,7 @@
                                 </p>
                             </div>
                         </div>
-                        <!-- 댓글 기능 구현 -->
-                        <hr class="border border-success border-3" style="margin-bottom: 20px;">
-                        <div class="comment_box">
-                            <div class="comment_input_box">
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control comment_name" id="floatingInputName" placeholder="홍길동">
-                                    <label for="floatingInputName">이름</label>
-                                  </div>
-                                <div class="form-floating">
-                                    <textarea class="form-control comment_textarea" placeholder="Leave a comment here"
-                                        id="floatingTextarea2Content" style="height: 100px; font-size: 20px;"></textarea>
-                                    <label for="floatingTextarea2Content">응원 한 마디 남겨주세요!!</label>
-                                </div>
-                                <button type="button" id="comment_upload_btn" class="btn btn-primary comment_btn">등록하기</button>
-                                <input type="hidden" value="김정찬"> 
-                            </div>
-                            <hr class="border border-dark border-2">
-                            <div class="comment_list" id="comment_list">
-                                <!-- 댓글 리스트가 들어갈 자리 -->
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -225,6 +238,110 @@
         </div>
     </div>
     <!-- 모달2 -->
+    <script>
+        function btnopen() {
+            window.open('https://github.com/rodlsdyd');
+        }
+
+        function btnopen2() {
+            window.open('https://blog.naver.com/rlslek3');
+        }
+    </script>
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="./imgs/홍성빈캐릭터.png" alt="홍성빈캐릭터" />
+                    <div class="textarea1">
+                        <h1> 홍성빈 <h1>
+                    </div>
+                    <div class="modalbutton">
+                        <button onclick="btnopen()" type="button" class="btn"> </button>
+                    </div>
+                    <div class="modalbutton2">
+                        <button onclick="btnopen2()" type="button" class="btn"> </button>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                <strong> 나의 MBTI 및 성격 </strong>
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong> ESFJ 친선도모형 </strong> 어디 모난곳 없고 두루 두루 다 친하게 지냅니다
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <strong> 나의 장점 </strong>
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>의견 교환이 원할한 스타일</strong> 거의 모든 의견을 수용하려고 노력하려고 합니다 다수결의 원칙을 따르더라도 어느정도
+                                소수에대한 의견도 받아들여 합의점을 찾기위해 많이 노력합니다
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <strong> 나의 협업 스타일 </strong>
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>주제 정하기 , 아이디어 내기.</strong> 주제나 아이디어같은걸 먼저 내서 문제 방식을 해결하거나 고민하는것을 해결하는
+                                스타일입니다.
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="border border-success border-3" style="margin-bottom: 30px;">
+                    <div class="comment_box">
+                        <div class="comment_input_box1">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control comment_name" id="floatingInputName"
+                                    placeholder="">
+                                <label class="label1" for="floatingInputName"></label>
+                            </div>
+                            <div class="form-floating">
+                                <textarea class="form-control comment_textarea1" placeholder=""
+                                    id="floatingTextarea2Content" style="height: 100px; font-size: 20px;"></textarea>
+                                <label for="floatingTextarea2Content"></label>
+                            </div>
+                            <button type="button" id="comment_upload_btn"
+                                class="btn btn-primary comment_btn1">등록하기</button>
+                            <input type="hidden" value="홍성빈">
+                        </div>
+                        <hr class="border border-dark border-2">
+                        <div class="comment_list" id="comment_list1">
+                            <!-- 댓글 리스트가 들어갈 자리 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
     <!-- 모달3 -->
     <!-- 모달4 (이장현) -->
     <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">

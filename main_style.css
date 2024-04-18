@@ -6,49 +6,60 @@
     font-style: normal;
 }
 
+/* ( 크롬, 사파리, 오페라, 엣지 ) 동작 */
+body::-webkit-scrollbar {
+    display: none;
+}
 
 
 /* 팀 로고, 팀 약속, 소개 */
+header {
+    background-image: url("./imgs/background_night.png");
+    background-repeat : no-repeat;
+    background-size : cover;
+    height: 100vh;
+    width: 100vw;
+}
 .header {
     height: 350px;
     padding: 30px;
 }
-.team_logo, .team_intro, .team_promise {
-    background-color: green;
-    border: 1px solid black;
-    display: inline-block;
-    height: 300px;
-    color: white;
-    padding: 10px;
+.team_logo > img {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 360px;
+    height: 120px;
 }
-.team_intro {
-    width: 35%;
-    float: left;
-}
-.team_logo {
-    width: 20%;
-    float: left;
+.header_card {
     margin-left: 5%;
+    margin-top: 5%;
+    width: 45%;
+    height: 42vh;
 }
-.team_promise {
-    width: 35%;
-    float: right;
+.mac_btn {
+    width: 80px;
+    height: 20px;
+    margin-bottom: 3px;
 }
 
 
 
 /* 개인 팀원 카드 */
 .main {
-    padding: 30px;
+    background-image: url("./imgs/background_night_2.png");
+    background-repeat : no-repeat;
+    background-size : cover;
+    padding: 80px 30px 30px 30px;
+    height: 80vh;
 }
-.card {
+.member_card {
     padding: 20px;
     border: 1px solid black;
     border-radius: 4px;
     background: #fff;
     transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
 }
-.card:hover {
+.member_card:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
 }
@@ -60,60 +71,19 @@
 }
 
 
-
-
-/* 김정찬 */
-.modal-header {
-    background-color: rgb(121, 201, 141);
+/* 댓글 기능 CSS */
+.footer {
+    background-image: url("./imgs/background_night_2.png");
+    background-size : contain;
+    padding-top: 30px;
 }
-.modal-body {
-    max-height: fit-content;
-    overflow-y: auto;
-}
-.tab-content {
-    height: 620px;
-    padding: 10px;
-}
-.modal1_body_left {
-    position: fixed;
-    border: 2px solid black;
-    float: left;
-    width: 400px;
-    padding: 20px 10px 10px 10px;
-    border-radius: 8px;
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.modal1_body_left_img {
-    width: 170px;
-    height: 260px;
-}
-.modal1_body_left_footer > a {
-    text-decoration: none;
-}
-.github_icon {
-    width: 53px;
-    height: 53px;
-    margin-right: 10px;
-    border-radius: 50px;
-}
-.velog_icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-}
-.modal1_body_right {
-    float: right;
-    width: 60%;
+.comment_box {
+    /* margin-top: 30px; */
 }
 .comment_input_box {
-    width: auto;
+    width: 50%;
     height: 230px;
-    padding-left: 20px;
-    padding-right: 20px;
+    margin: 0px auto 20px auto;
 }
 .comment_name {
     border: 1.5px solid black;
@@ -129,11 +99,12 @@
     float: right;
 }
 .comment_list {
-    width: auto;
+    width: 50%;
     height: auto;
-    padding-left: 10px;
-    padding-right: 20px;
-    margin-top: 25px;
+    padding: 10px 10px 20px 10px;
+    margin: 0px auto 0px auto;
+    background-color: #fff;
+    border-radius: 5px;
 }
 .comment {
     width: auto;
@@ -161,6 +132,7 @@
 }
 .commenter {
     display: block;
+    font-size: 17px;
 }
 .comment_time {
     display: block;
@@ -168,7 +140,8 @@
 }
 .comment_content {
     display: block;
-    margin-left: 5px;
+    margin-left: 10px;
+    font-size: 17px;
 }
 .comment_right {
     float: right;
@@ -176,61 +149,122 @@
     text-align: right;
     padding-top: 22px;
 }
+.comment_delete_btn {
+    margin-right: 10px;
+}
 
 
 
 
 
-
-/* 이장현 */
-/* 카드 본체 */
-.jcard {
-    width: 20rem;
-    height: 800px;
-
-    margin: 50px auto 0px auto;
-    padding: 20px;
+/* 김정찬 모달 */
+.modal-header {
+    background-color: rgb(121, 201, 141);
+}
+.modal-body {
+    max-height: fit-content;
+    overflow-y: auto;
+}
+.tab-content {
+    height: 540px;
+    padding: 10px;
+}
+.modal1_body_left {
+    border: 2px solid black;
+    float: left;
+    width: 400px;
+    padding: 20px 10px 10px 10px;
+    border-radius: 8px;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    border: 1px solid black;
-    outline-style: outset;
+}
+.modal1_body_left_img {
+    width: 100px;
+    height: 180px;
+}
+.modal1_body_left_footer > a {
+    text-decoration: none;
+}
+.github_icon {
+    width: 53px;
+    height: 53px;
+    margin-right: 10px;
+    border-radius: 50px;
+}
+.velog_icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+.modal1_body_right {
+    float: right;
+    width: 60%;
 }
 
-/* 카드 이미지 */
-.jcard > img {
-    border-radius: 50%;
-    border: 1px solid black;
+
+
+
+
+/*홍성빈*/
+#exampleModal2 > .btn {
+    padding: 20px 20px;
 }
+.modalbutton {
+    padding: 20px 20px;
+    position: absolute;
+    bottom: 300px;
+    left: 170px;
 
-/* 카드 이름 */
-.jcard-title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0px auto 0px auto;
+    background-image: url(imgs/깃허브버튼.png);
+    background-position: center;
+    background-size: cover;
+} 
+.modalbutton2 {
+    padding: 20px 20px;
+    position: absolute;
+    bottom: 300px;
+    left: 250px;
+    background-image: url(imgs/네이버버튼.png);
+    background-position: center;
+    background-size: cover;
 }
-
-
-.jcard-text {
-    border-radius: 10px;
-
-    margin: 50px auto 0px auto;
-    padding: 30px;
-
-    border: 1px solid black;
+.textarea1 {
+    position: absolute;
+    bottom:400px;
+    left: 190px;
 }
-
-.linkbutton {
+.modal-body > img {
+    float: top;
+    margin-left: 120px;
+    position: absolute;
+}
+.accordion-item {
     padding: 20px;
-    margin-right: 5px;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    margin-left: 500px;
 }
-
+.comment_input_box1 > .mb-3 {
+    padding: 20px;
+    margin-left: 520px;
+}
+.comment_textarea1 {
+    resize: none; 
+    width: 600px;
+    margin-bottom: 10px;
+    margin-left: 300px;
+    float:right;
+    border: 1.5px solid black;
+    font-size: 20px;
+}
+.comment_btn1 {
+    margin-left: 500px;
+    float:right;
+}
+.comment_input_box1 {
+    width: auto;
+    height: 300px;
+    padding-left: 20px;
+    padding-right: 20px;
+} 
