@@ -115,18 +115,7 @@
 
 
 
-.header {
-    background-image: url(imgs/배경\,심볼.png);
-    background-position: center;
-    background-size: cover;
-}
-
-body {
-    background-image: url(imgs/배경.png);
-    background-position: center;
-    background-size: cover;
-}
-
+/*홍성빈*/
 
 .btn {
     padding: 20px 20px;
@@ -137,7 +126,7 @@ body {
 
     padding: 20px 20px;
     position: absolute;
-    bottom: 100px;
+    bottom: 300px;
     left: 170px;
 
     background-image: url(imgs/깃허브버튼.png);
@@ -153,7 +142,7 @@ body {
     padding: 20px 20px;
 
     position: absolute;
-    bottom: 100px;
+    bottom: 300px;
     left: 250px;
 
     background-image: url(imgs/네이버버튼.png);
@@ -163,18 +152,20 @@ body {
 
 }
 
-.textarea {
+.textarea1 {
 
     position: absolute;
-    bottom: 200px;
-    left: 180px;
+    bottom:400px;
+    left: 190px;
 
 }
 
 .modal-body>img {
+
+    float: top;
+    margin-left: 120px;
     position: absolute;
-    bottom: 300px;
-    left: 130px;
+    
 }
 
 .accordion-item {
@@ -192,11 +183,87 @@ body {
 
 }
 
+
+
+
+
 .comment_btn{
     float: right;
 }
 
+.comment_input_box {
+    width: auto;
+    height: 300px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.comment_name {
+    border: 1px solid black;
+    font-size: 20px;
+}
+.comment_textarea{
+    resize: none; 
+    width: 600px;
+    margin-bottom: 10px;
+    margin-left: 300px;
+    float:right;
+    border: 1.5px solid black;
+    font-size: 20px;
+}
+.comment_btn {
 
+    margin-left: 500px;
+    float:right;
+}
+.comment_list {
+    width: auto;
+    height: auto;
+    padding-left: 10px;
+    padding-right: 20px;
+    margin-top: 25px;
+}
+.comment {
+    width: auto;
+    height: 100px;
+}
+.comment_left {
+    float: left;
+    width: 70%;
+}
+.commenter_info {
+    margin-top: 100px;
+    display: block;
+    position: relative;
+}
+.comment_img {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    position: absolute;
+    margin-top: 0px;
+}
+.commenter_and_time {
+    display: inline-block;
+    margin-left: 75px;
+}
+.commenter {
+    display: block;
+}
+.comment_time {
+    display: block;
+    margin-top: -10px;
+}
+.comment_content {
+    display: block;
+    margin-left: 5px;
+}
+.comment_right {
+    float: right;
+    width: 20%;
+    text-align: right;
+    padding-top: 22px;
+}
 
 
 
