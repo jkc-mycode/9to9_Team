@@ -107,3 +107,15 @@ $('#comment_list').on('click', '.comment_delete_btn', async function() {
 // });
 
 
+
+$("#accordion_openclose1").click(async function () {
+    $('#mbtiEom_contens').toggle();
+})
+
+$("#accordion_openclose2").click(async function () {
+    $('#Advantages_contens').toggle();
+})
+
+$("#accordion_openclose3").click(async function () {
+    $('#Cooperation_contens').toggle();
+})
