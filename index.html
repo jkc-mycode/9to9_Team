@@ -15,22 +15,28 @@
 <body>
     <header>
         <div class="header">
-            <div class="team_intro">
-                <h2>우리 팀 소개</h2>
-            </div>
             <div class="team_logo">
-                <h2>로고</h2>
+                <img src="./imgs/team_logo.png">
             </div>
-            <div class="team_promise">
-                <h2>우리 팀 약속</h2>
-            </div>
+            <div class="card header_card">
+                <h5 class="card-header"><img class="mac_btn" src="./imgs/mac_btn.png"></h5>
+                <div class="card-body">
+                  <h3 class="card-title"><b>우리 팀 소개</b></h3><br>
+                  <p class="card-text" style="font-size: 25px; font-weight: bold; line-height: 2.0;">
+                    저희 9to9조는 Node.js 5기 웹개발과 게임서버개발을 공부하며 <br>
+                    프로젝트를 만드는 다양한 목표를 가진 팀원들이 모였습니다. <br>
+                    서로 성장하고 취업을 목표로, 기본 코딩능력과 팀워크를 키우며 <br>
+                    1인분 이상의 개발자로서 함께 발전할 것입니다.
+                </p>
+                </div>
+              </div>
         </div>
     </header>
 
     <div class="main">
         <div class="row row-cols-1 row-cols-md-5 g-4">
             <div class="col">
-                <div class="card">
+                <div class="card member_card">
                     <img src="./imgs/김정찬_아바타.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">팀장 김정찬</h5>
@@ -43,7 +49,7 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card">
+                <div class="card member_card">
                     <img src="./imgs/김정찬_아바타.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">팀원 홍성빈</h5>
@@ -54,7 +60,7 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card">
+                <div class="card member_card">
                     <img src="./imgs/김정찬_아바타.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">팀원 엄혜인</h5>
@@ -65,7 +71,7 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card">
+                <div class="card member_card">
                     <img src="./imgs/김정찬_아바타.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">팀원 이장현</h5>
@@ -76,7 +82,7 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card">
+                <div class="card member_card">
                     <img src="./imgs/김정찬_아바타.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">팀원 박순호</h5>
@@ -264,5 +270,4 @@
         crossorigin="anonymous"></script>
     <script type="module" src="./main_script.js"></script>
 </body>
-
 </html>

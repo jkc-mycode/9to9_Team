@@ -6,15 +6,42 @@
     font-style: normal;
 }
 
+/* ( 크롬, 사파리, 오페라, 엣지 ) 동작 */
+body::-webkit-scrollbar {
+    display: none;
+}
 
 
 /* 팀 로고, 팀 약속, 소개 */
+header {
+    /* background-color: green; */
+    background-image: url("./imgs/background_night.png");
+    background-repeat : no-repeat;
+    background-size : cover;
+    height: 100vh;
+    width: 100vw;
+}
 .header {
     height: 350px;
     padding: 30px;
 }
-.team_logo, .team_intro, .team_promise {
-    background-color: green;
+.team_logo > img {
+    margin-top: 10px;
+    width: 360px;
+    height: 120px;
+}
+.header_card {
+    margin-left: 5%;
+    margin-top: 5%;
+    width: 45%;
+    height: 42vh;
+}
+.mac_btn {
+    width: 80px;
+    height: 20px;
+    margin-bottom: 3px;
+}
+/* .team_logo, .team_intro, .team_promise {
     border: 1px solid black;
     display: inline-block;
     height: 300px;
@@ -22,7 +49,7 @@
     padding: 10px;
 }
 .team_intro {
-    width: 35%;
+    width: 33%;
     float: left;
 }
 .team_logo {
@@ -31,24 +58,28 @@
     margin-left: 5%;
 }
 .team_promise {
-    width: 35%;
-    float: right;
-}
+    width: 33%;
+    float: left;
+} */
 
 
 
 /* 개인 팀원 카드 */
 .main {
-    padding: 30px;
+    background-image: url("./imgs/background_night_2.png");
+    background-repeat : no-repeat;
+    background-size : cover;
+    padding: 80px 30px 30px 30px;
+    height: 80vh;
 }
-.card {
+.member_card {
     padding: 20px;
     border: 1px solid black;
     border-radius: 4px;
     background: #fff;
     transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
 }
-.card:hover {
+.member_card:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
 }
