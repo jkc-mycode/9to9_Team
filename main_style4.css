@@ -61,82 +61,13 @@
 }
 
 
-/* 이장현 */
-/* 카드 본체 */
-.jcard {
-    width: 20rem;
-    height: 800px;
-
-    margin: 50px auto 0px auto;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    border: 1px solid black;
-    outline-style: outset;
+/* 박순호 */
+.modal5_body_left {
+    margin-bottom: 20px;
 }
-
-/* 카드 이미지 */
-.jcard > img {
-    border-radius: 50%;
-    border: 1px solid black;
+.modal5_body_right {
+    height: 370px;
 }
-
-/* 카드 이름 */
-.jcard-title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0px auto 0px auto;
+.tab-content5 {
+    padding-left: 10px;
 }
-
-
-.jcard-text {
-    border-radius: 10px;
-
-    margin: 50px auto 0px auto;
-    padding: 30px;
-
-    border: 1px solid black;
-}
-
-.linkbutton {
-    padding: 20px;
-    margin-right: 5px;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
-
-
-/* 모달 창 */
-/* .modal {
-    background-color: gray;
-    position:absolute;
-    display:none;
-
-    justify-content: center;
-    top:0;
-    left:0;
-
-    width:100%;
-    height:100%;
-    opacity: 0.9;
-}
-
-.modal_body {
-    border: 1px solid black;
-}
-
-.modal_content {
-    background-color: white;
-    width: 100px;
-    height: 100px;
-    opacity: 1.5;
-} */
