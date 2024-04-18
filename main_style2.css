@@ -150,6 +150,7 @@
     opacity: 1.5;
 } */
 
+
 /*엄혜인*/
 /*이미지 상자 */
 .aboutmeEom {
@@ -168,6 +169,7 @@
     align-items: center;
     justify-content: center;
     float: left;
+    max-height: 600px;
 }
 
 .aboutmeEom .imageEom {
@@ -175,19 +177,25 @@
     height: 300px;
 }
 
-.h1 {
-    font-size: 20px;
+.imageEom {
+    margin: 60px;
+}
+
+.aboutmeEom h1 {
+    font-size: 30px;
 }
 
 /*소개 상자 */
 .introductionEom {
     width: 100%;
-    height: 80px;
-    background-color: beige;
+    height: 200px;
+    background-color: white;
     display: flex;
+    ;
     align-items: center;
     position: relative;
 }
+
 .introductionEom p {
     font-size: 15px;
     text-align: center;
@@ -204,15 +212,18 @@
     align-items: center;
     justify-content: center;
 }
+
 .githubeEom {
     background-color: white;
     border: none;
 }
+
 .naverblogEom {
     background-color: white;
     border: none;
-    
+
 }
+
 .archivingEom img {
     height: 40px;
     width: 40px;
@@ -221,32 +232,25 @@
 
 
 /*나의 소개 부분 아코디언*/
-.mystyleEom {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    transform: all 0.25s case;
 
-    min-height: 100px;
-    min-width: 500px; 
-    display: flex;
-    
+.mystyleEom {
+    min-height: 10%;
+    min-width: 20%;
     align-items: center;
     justify-content: center;
+    background: #81BEF7;
     padding: 50px;
-    background-color: #81BEF7;
     border-radius: 5px;
-
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
-
+    max-height: 100%;
 }
 
 .mystyleEom_accordion {
     width: 600px;
+    max-height: 100%;
+    position: relative;
+
 }
 
 .mystyleEom_accordion input {
@@ -260,11 +264,11 @@
     margin-bottom: 0px;
 }
 
-.mystyleEom h1{
+.mystyleEom h1 {
     font-size: 20px;
 }
 
-.accordion_head_1 .accordion_btn1{
+.accordion_head_1 .accordion_btn1 {
     background: white;
     display: flex;
     justify-content: flex-start;
@@ -291,7 +295,7 @@
 
 /*자바스크립트 해야됨 height 120px이면 accordion_body height는 0px
 .accordion_body{
-    height: 100px;
+    height: 120px;
     overflow: hidden;
 }*/
 
@@ -304,11 +308,10 @@
     margin-top: 5px;
     padding: 15px 20px;
     color: white;
-    font-weight: 600;
 }
 
 /*나의 장점*/
-.accordion_head_2 .accordion_btn2{
+.accordion_head_2 .accordion_btn2 {
     background: white;
     display: flex;
     justify-content: flex-start;
@@ -325,6 +328,7 @@
     margin-right: 15px;
     color: navy;
 }
+
 .AdvantagesEom {
     position: relative;
     display: block;
@@ -334,7 +338,7 @@
 
 
 /*나의 협업스타일*/
-.accordion_head_3 .accordion_btn3{
+.accordion_head_3 .accordion_btn3 {
     background: white;
     display: flex;
     justify-content: flex-start;
@@ -351,6 +355,7 @@
     margin-right: 15px;
     color: navy;
 }
+
 .CooperationEom {
     position: relative;
     display: block;

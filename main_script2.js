@@ -6,6 +6,7 @@ import { addDoc, getDocs, deleteDoc, updateDoc } from "https://www.gstatic.com/f
 import { firebaseConfig } from "./secret.js"
 
 
+
 // Firebase 인스턴스 초기화
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
@@ -14,7 +15,7 @@ const db = getFirestore(app);
 let member = "";
 
 // 더 보기 버튼 클릭 시 동작 (댓글 출력을 위해 사용)
-$('.about').click(async function() {
+$('.about').click(async function () {
     member = $(this).next("input").val();
     console.log(member);
 
@@ -40,7 +41,7 @@ $('.about').click(async function() {
             let seconds = ('0' + date.getSeconds()).slice(-2)
 
             let day = year + '-' + month + '-' + days + " " + hours + ":" + minutes + ":" + seconds
-            
+
             let html_temp = `
                 <div class="comment">
                     <div class="comment_left">
@@ -94,10 +95,10 @@ $("#comment_upload_btn").click(async function () {
 
 
 // 데이터베이스의 데이터를 지우는 것이 아닌 isDelete를 플래그로 사용
-$('#comment_list').on('click', '.comment_delete_btn', async function() {
+$('#comment_list').on('click', '.comment_delete_btn', async function () {
     if (confirm("댓글을 삭제하시겠습니까?")) {
         await updateDoc(doc(db, '9to9_Team_Intro', $(this).val()), {
-            isDelete : true,
+            isDelete: true,
         })
         alert("삭제되었습니다.");
         window.location.reload();
@@ -115,14 +116,28 @@ $('#comment_list').on('click', '.comment_delete_btn', async function() {
 // });
 
 
-/*엄혜인 이모티콘 있는 아코디언 누르면 mbti 성격, 장점, 협업 스타일 누르면 나타나개 하기*/
-function openclose_1() {
+
+
+/*엄혜인 이모티콘 있는 아코디언 누르면 mbti 성격, 장점, 협업 스타일 누르면 나타나게 하기*/
+/*function openclose1() {
     $('#mbtiEom_contens').toggle();
 }
-
-function openclose_2() {
+function openclose2() {
     $('#Advantages_contens').toggle();
 }
-function openclose_3() {
+function openclose3() {
     $('#Cooperation_contens').toggle();
 }
+*/
+
+$("#accordion_openclose1").click(async function () {
+    $('#mbtiEom_contens').toggle();
+})
+
+$("#accordion_openclose2").click(async function () {
+    $('#Advantages_contens').toggle();
+})
+
+$("#accordion_openclose3").click(async function () {
+    $('#Cooperation_contens').toggle();
+})
