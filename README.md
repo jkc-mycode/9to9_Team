@@ -1,4 +1,4 @@
-# 🖥️ 팀 9to9의 팀 소개 페이지 프로젝트
+# 🖥️ Team 9to9의 팀 소개 페이지 프로젝트
 ![alt text](./imgs/readme/image.png)
 
 ## 프로젝트 소개
