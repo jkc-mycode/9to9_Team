@@ -3,7 +3,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebas
 import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 import { collection, query, orderBy, doc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 import { addDoc, getDocs, deleteDoc, updateDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
-import { firebaseConfig } from "./secret.js"
+import { firebaseConfig } from "../secret.js"
 
 
 
