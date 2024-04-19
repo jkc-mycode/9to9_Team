@@ -1,6 +1,5 @@
 
 //김정찬
-$(document).ready(function () {
     $("#exampleModal1").html(`<div class="modal-dialog modal-xl modal-dialog-scrollable">
     <div class="modal-content">
         <div class="modal-header">
@@ -110,11 +109,9 @@ $(document).ready(function () {
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
     </div>
-</div>`)
-});
+</div>`);
 
 //홍성빈
-$(document).ready(function () {
     $("#exampleModal2").html(`
     <script>
     function btnopen() {
@@ -195,11 +192,9 @@ $(document).ready(function () {
     <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
     </div>
-</div>`)
-});
+</div>`);
 
 //엄혜인
-$(document).ready(function () {
     $("#exampleModal_3").html(`<div class="modal-dialog modal-xl">
     <div class="modal-content">
         <div class="modal-header modal3_header">
@@ -215,7 +210,7 @@ $(document).ready(function () {
                     <p class="introductionEom_text">호기심많고 새로운 도전을 즐기는 개발자! </p>
                 </div>
                 <div class="archivingEom">
-                    <a href="https://github.com/Eomhyein/" target="_blank">
+                    <a href="https://blog.naver.com/mickey_8688" target="_blank">
                         <button class="githubeEom" type="button"><img src="./imgs/깃허브_아이콘.png"
                                 alt="깃허브이미지"></button>
                     </a>
@@ -276,11 +271,9 @@ $(document).ready(function () {
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
     </div>
-</div>`)
-});
+</div>`);
 
 //이장현
-$(document).ready(function () {
     $("#exampleModal4").html(`<div class="modal-dialog modal-xl">
     <div class="modal-content">
         <div class="modal-header modal4_header">
@@ -348,13 +341,11 @@ $(document).ready(function () {
             </div>
         </div>
     </div>
-</div>`)
-});
+</div>`);
 
 
 
 // 박순호
-$(document).ready(function () {
     $("#exampleModal5").html(`<div class="modal-dialog modal-xl">
     <div class="modal-content">
         <div class="modal-header modal5_header">
@@ -420,7 +411,6 @@ $(document).ready(function () {
     </div>
     </div>`
     );
-});
 
 
 
