@@ -14,7 +14,7 @@
 - 팀원 : 홍성빈 [@rodlsdyd](https://github.com/rodlsdyd)
 - 팀원 : 엄혜인 [@Eomhyein](https://github.com/Eomhyein/)
 - 팀원 : 이장현 [@JHLee0891](https://github.com/JHLee0891)
-- 팀원 : 박순호 [@shpark694576](https://[www.youtube.com](https://github.com/shpark694576)/)
+- 팀원 : 박순호 [@shpark694576](https://github.com/shpark694576/)
 
 <br>
 
