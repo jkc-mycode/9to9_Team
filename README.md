@@ -5,7 +5,7 @@
 - 저희 프로젝트의 이름은 정시퇴근입니다.
 - 이 프로젝트를 기반으로 정시퇴근하는 삶을 지향하지는 의미입니다.
 - 이 프로젝트는 팀과 팀원들을 소개하는 페이지를 구현하는 미니 프로젝트 입니다.
-- 시연 영상 : [https://www.youtube.com/](https://www.youtube.com/)
+- 시연 영상 : [https://youtu.be/xNCu4vm39ks?si=bw1MrqOeRJJSE9Pj](https://youtu.be/xNCu4vm39ks?si=bw1MrqOeRJJSE9Pj)
 
 <br>
 
