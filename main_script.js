@@ -210,7 +210,7 @@
                     <p class="introductionEom_text">호기심많고 새로운 도전을 즐기는 개발자! </p>
                 </div>
                 <div class="archivingEom">
-                    <a href="https://blog.naver.com/mickey_8688" target="_blank">
+                    <a href="https://gitbub.com/Eomhyein/" target="_blank">
                         <button class="githubeEom" type="button"><img src="./imgs/깃허브_아이콘.png"
                                 alt="깃허브이미지"></button>
                     </a>
